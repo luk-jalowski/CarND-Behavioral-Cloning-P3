@@ -46,13 +46,13 @@ In the beginning I've started with LaNet architecture used in previous project. 
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+![alt text](examples/center_bridge.jpg)
+![alt text](examples/center-drit-road.jpg)
 
 I then recorded the vehicle recovering from sides of the road and driving to the center
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+![alt text](examples/left.jpg)
+![alt text](examples/left2.jpg)
 
 Then I repeated this process on track two in order to get more data points.
 
