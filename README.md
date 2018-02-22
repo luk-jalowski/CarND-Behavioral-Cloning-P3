@@ -5,6 +5,7 @@ My project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
 * model-final.h5 containing a trained convolution neural network 
+* final_run.mp4 constaining video of model driving in the simulator autonomously
 
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
@@ -14,14 +15,15 @@ python drive.py model.h5
 
 #### 3. Submission code is usable and readable
 
-The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline used for loading data and then training and validating the model. Code is commented to explain how the code works.
+The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline used for loading data and then training and validating the model. Code is commented to explain how it works.
 
 ### Model Architecture and Training Strategy
 
 #### 1. An appropriate model architecture has been employed
 
 For my model I've used network architecture described here: https://devblogs.nvidia.com/deep-learning-self-driving-cars/ with added dropout layers between fully connected layers.
-Final network architecture obtained via summary() function in keras:
+Final network architecture obtained via summary() function in keras. Lambda layer is used as for normalizing data images.
+```
 ____________________________________________________________________________________________________
 Layer (type)                     Output Shape          Param #     Connected to                     
 ====================================================================================================
@@ -59,7 +61,7 @@ Total params: 348,219
 Trainable params: 348,219
 Non-trainable params: 0
 ____________________________________________________________________________________________________
-
+```
 
 #### 2. Attempts to reduce overfitting in the model
 
@@ -95,7 +97,7 @@ I then recorded the vehicle recovering from sides of the road and driving to the
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I flipped all the images and negated steering value.
+To augment the data set, I flipped all the images and negated steering value.
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
